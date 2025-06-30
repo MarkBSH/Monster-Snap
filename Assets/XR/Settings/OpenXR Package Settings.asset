@@ -401,25 +401,25 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -5017314010878238811}
-  - {fileID: 7211512269057522757}
-  - {fileID: -3005142760594798565}
-  - {fileID: -7050647481355523941}
-  - {fileID: 2158030074957953034}
-  - {fileID: -6734879407051594623}
-  - {fileID: 4915192522769903137}
-  - {fileID: -5905518684548000757}
-  - {fileID: -5830162560709519758}
-  - {fileID: -6716123566901645983}
-  - {fileID: 1927305505566180813}
-  - {fileID: 5535189143248310026}
-  - {fileID: 7056854577208559619}
-  - {fileID: -3616422330133341921}
-  - {fileID: -2857750533473774030}
-  - {fileID: 6016941736976803466}
-  - {fileID: -1150865085835551002}
-  - {fileID: -7899175940214211933}
-  - {fileID: 3988524067778088865}
+  - {fileID: 7633979984978270935}
+  - {fileID: -5690352189061263679}
+  - {fileID: -8411049284283158666}
+  - {fileID: -2926833752773562932}
+  - {fileID: -5867943972408698676}
+  - {fileID: -7223395574348401251}
+  - {fileID: 4094731025268782372}
+  - {fileID: 8720101775981609785}
+  - {fileID: -5729091212528422148}
+  - {fileID: -2415469661140867373}
+  - {fileID: -279643314013007215}
+  - {fileID: 4057317088758344275}
+  - {fileID: -5911947155650122474}
+  - {fileID: 7029505351197480548}
+  - {fileID: 3077119639454220964}
+  - {fileID: -3091483648618757144}
+  - {fileID: -8390587855371858794}
+  - {fileID: -2630994189563943025}
+  - {fileID: -1236802950814299834}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -1761,24 +1761,24 @@ MonoBehaviour:
   m_Name: Metro
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -6443001427329051136}
-  - {fileID: -1430226706715624399}
-  - {fileID: 2332864393660078247}
-  - {fileID: 8130377142938004629}
-  - {fileID: 1863413513750301276}
-  - {fileID: -7131777570678775299}
-  - {fileID: 6355479007687117697}
-  - {fileID: 2927430663352350952}
-  - {fileID: -7666717298749288105}
-  - {fileID: 2141046081877337846}
-  - {fileID: 4950015800097572915}
-  - {fileID: 7849217966879592269}
-  - {fileID: -6665356146488687682}
-  - {fileID: 405571412080212425}
-  - {fileID: -8027507991464601647}
-  - {fileID: 4762401585348687876}
-  - {fileID: -6434522849954143435}
-  - {fileID: -6277326416391363145}
+  - {fileID: 6208848166049861704}
+  - {fileID: -2827493888585470202}
+  - {fileID: -8753648542292351395}
+  - {fileID: -3925061848591799852}
+  - {fileID: 5659209014017828753}
+  - {fileID: -6762811563309982003}
+  - {fileID: -4175816483431248569}
+  - {fileID: 3882649045964784039}
+  - {fileID: 7291205128414454091}
+  - {fileID: 9148706214817704891}
+  - {fileID: 5160543457898580730}
+  - {fileID: -7454034210622791276}
+  - {fileID: 8798373697180381985}
+  - {fileID: 3244668272927148732}
+  - {fileID: -8140151722819918170}
+  - {fileID: -3867918659432879511}
+  - {fileID: -618233166167862125}
+  - {fileID: 6306220365888867699}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -4226,11 +4226,11 @@ MonoBehaviour:
   m_Name: MicrosoftMotionControllerProfile Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
+  nameUi: Microsoft Motion Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.microsoftmotioncontroller
   openxrExtensionStrings: 
-  company: 
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &8858010757926891362
