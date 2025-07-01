@@ -100,7 +100,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void RegenerateStamina()
     {
-        if (!m_IsSprinting && m_CurrentStamina < m_MaxStamina)
+        bool isActuallyMoving = m_MoveInput.magnitude > 0.1f;
+
+        if ((!m_IsSprinting || !isActuallyMoving) && m_CurrentStamina < m_MaxStamina)
         {
             if (m_IsCrouching)
             {
@@ -115,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
                 m_CurrentStamina = m_MaxStamina;
             }
         }
-        else if (m_IsSprinting && m_CurrentStamina > 0.0f)
+        else if (m_IsSprinting && isActuallyMoving && m_CurrentStamina > 0.0f)
         {
             m_CurrentStamina -= m_SprintStaminaCost * Time.deltaTime;
             if (m_CurrentStamina < 0.0f)

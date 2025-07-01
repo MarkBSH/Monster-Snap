@@ -43,12 +43,6 @@ public class FlashlightDimming : MonoBehaviour
         float _targetIntensity = m_BaseIntensity;
         if (Physics.Raycast(m_Camera.transform.position, transform.forward, out RaycastHit hit, m_CloseRange))
         {
-            Debug.Log($"distance: {hit.distance}" +
-                      $" | flashlight intensity: {m_Flashlight.intensity}" +
-                      $" | base intensity: {m_BaseIntensity}" +
-                      $" | min intensity: {m_MinIntensity}"
-                      );
-
             float _hitDistance = hit.distance - 0.5f;
             _targetIntensity = Mathf.Lerp(m_MinIntensity, m_BaseIntensity, Mathf.Clamp(_hitDistance / m_CloseRange, 0.0f, 1.0f));
         }

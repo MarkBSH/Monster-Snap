@@ -401,25 +401,25 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 7633979984978270935}
-  - {fileID: -5690352189061263679}
-  - {fileID: -8411049284283158666}
+  - {fileID: 7461662234686114}
+  - {fileID: 5291118924240001739}
+  - {fileID: -3005142760594798565}
   - {fileID: -2926833752773562932}
   - {fileID: -5867943972408698676}
-  - {fileID: -7223395574348401251}
-  - {fileID: 4094731025268782372}
-  - {fileID: 8720101775981609785}
-  - {fileID: -5729091212528422148}
+  - {fileID: -6734879407051594623}
+  - {fileID: -9012070629970661676}
+  - {fileID: -5905518684548000757}
+  - {fileID: -4801438278933726723}
   - {fileID: -2415469661140867373}
-  - {fileID: -279643314013007215}
-  - {fileID: 4057317088758344275}
-  - {fileID: -5911947155650122474}
-  - {fileID: 7029505351197480548}
-  - {fileID: 3077119639454220964}
-  - {fileID: -3091483648618757144}
-  - {fileID: -8390587855371858794}
-  - {fileID: -2630994189563943025}
-  - {fileID: -1236802950814299834}
+  - {fileID: 4841325455513145841}
+  - {fileID: -1488453961318907454}
+  - {fileID: 7056854577208559619}
+  - {fileID: -885348503187303056}
+  - {fileID: 1415353621246143524}
+  - {fileID: -5635431372957325524}
+  - {fileID: -8320007660269660348}
+  - {fileID: -2405060372981339068}
+  - {fileID: -508244812769386353}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -1521,11 +1521,11 @@ MonoBehaviour:
   m_Name: EyeGazeInteraction Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Eye Gaze Interaction Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.eyetracking
+  openxrExtensionStrings: XR_EXT_eye_gaze_interaction
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &-2632694693611970954
@@ -1762,23 +1762,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   features:
   - {fileID: 6208848166049861704}
-  - {fileID: -2827493888585470202}
-  - {fileID: -8753648542292351395}
-  - {fileID: -3925061848591799852}
-  - {fileID: 5659209014017828753}
+  - {fileID: -4699281117442443164}
+  - {fileID: -2826816494450124986}
+  - {fileID: 5664218110947488307}
+  - {fileID: 1863413513750301276}
   - {fileID: -6762811563309982003}
-  - {fileID: -4175816483431248569}
-  - {fileID: 3882649045964784039}
-  - {fileID: 7291205128414454091}
-  - {fileID: 9148706214817704891}
-  - {fileID: 5160543457898580730}
-  - {fileID: -7454034210622791276}
-  - {fileID: 8798373697180381985}
+  - {fileID: -6165164622870355363}
+  - {fileID: 6141311282084441612}
+  - {fileID: -8349462149979293890}
+  - {fileID: 371177231939913583}
+  - {fileID: 4950015800097572915}
+  - {fileID: -2632694693611970954}
+  - {fileID: 8148462776941775599}
   - {fileID: 3244668272927148732}
-  - {fileID: -8140151722819918170}
+  - {fileID: -180429862534491280}
   - {fileID: -3867918659432879511}
-  - {fileID: -618233166167862125}
-  - {fileID: 6306220365888867699}
+  - {fileID: 611055784971370902}
+  - {fileID: 3351902159289744076}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -2871,11 +2871,11 @@ MonoBehaviour:
   m_Name: HPReverbG2ControllerProfile Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: HP Reverb G2 Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.hpreverb
+  openxrExtensionStrings: XR_EXT_hp_mixed_reality_controller
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &2758061008305022136
@@ -3213,11 +3213,11 @@ MonoBehaviour:
   m_Name: MetaQuestTouchPlusControllerProfile Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Meta Quest Touch Plus Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.metaquestplus
+  openxrExtensionStrings: XR_META_touch_controller_plus
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &4602580355712348703
@@ -3530,11 +3530,13 @@ MonoBehaviour:
   m_Name: FoveatedRenderingFeature Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Foveated Rendering
+  version: 1
+  featureIdInternal: com.unity.openxr.feature.foveatedrendering
+  openxrExtensionStrings: XR_UNITY_foveation XR_FB_foveation XR_FB_foveation_configuration
+    XR_FB_swapchain_update_state XR_FB_foveation_vulkan XR_META_foveation_eye_tracked
+    XR_META_vulkan_swapchain_create_info
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &6016941736976803466
