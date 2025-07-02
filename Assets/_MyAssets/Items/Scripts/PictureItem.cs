@@ -2,6 +2,8 @@ using System.Collections;
 using System.IO;
 using UnityEngine;
 
+// TODO - Center of Gravity tweaking
+
 public class PictureItem : ItemBase
 {
     #region Unity Methods

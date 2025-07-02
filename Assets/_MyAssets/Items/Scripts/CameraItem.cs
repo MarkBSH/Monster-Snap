@@ -80,6 +80,8 @@ public class CameraItem : ItemBase
         }
     }
 
+    // TODO - less laggy way to take pictures
+
     private IEnumerator TakePicture()
     {
         m_CameraFlash.SetActive(true);
