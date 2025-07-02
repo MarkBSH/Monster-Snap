@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2960198724991469604}
   - component: {fileID: 3378540380265365923}
   - component: {fileID: 2383824458956347101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}
@@ -54,7 +54,6 @@ MonoBehaviour:
   m_ItemInfo: {fileID: 11400000, guid: d3a16f81596b9c643ae15c59740b94d3, type: 2}
   m_PictureItemPrefab: {fileID: 3570365073073411558, guid: b0c8f21eb5e7daa47bdf6d0be222403a, type: 3}
   m_RenderTexture: {fileID: 8400000, guid: 5ccf69a046fa4224d8b03143174abb26, type: 2}
-  m_OutputFileName: snapshot.png
 --- !u!65 &1500315775206994226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -177,7 +176,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -209,7 +208,7 @@ GameObject:
   - component: {fileID: 8460105247101024616}
   - component: {fileID: 4008317184449958821}
   - component: {fileID: 3549813835867603737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +329,7 @@ GameObject:
   - component: {fileID: 6673151605378324186}
   - component: {fileID: 6034826286662611317}
   - component: {fileID: 3157001006732835285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 551234885242255826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +450,7 @@ GameObject:
   - component: {fileID: 4329903845406139042}
   - component: {fileID: 7138144247019838967}
   - component: {fileID: 920123829565525623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +536,7 @@ GameObject:
   - component: {fileID: 1784126981191320108}
   - component: {fileID: 6285161296574520451}
   - component: {fileID: 3306377111413236677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9183130850392553538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PictureDropPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +653,7 @@ GameObject:
   - component: {fileID: 2880905480645011835}
   - component: {fileID: 4153564061821800050}
   - component: {fileID: 572247431415504949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

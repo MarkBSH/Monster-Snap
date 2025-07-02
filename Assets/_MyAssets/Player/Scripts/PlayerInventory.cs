@@ -117,6 +117,12 @@ public class PlayerInventory : MonoBehaviour
 
     private void UpdateInventoryUI()
     {
+        if (m_SelectedItem is PictureItem previousPictureItem)
+        {
+            previousPictureItem.m_ShowPicture = false;
+            StartCoroutine(previousPictureItem.LerpToShowPicture(0.01f));
+        }
+
         for (int i = 0; i < 5; i++)
         {
             if (i == m_selectedItemIndex)
@@ -214,6 +220,14 @@ public class PlayerInventory : MonoBehaviour
     {
         if (_context.performed && m_SelectedItem != null)
         {
+            // Check if the item being dropped is a PictureItem with m_ShowPicture = true
+            if (m_SelectedItem is PictureItem pictureItem && pictureItem.m_ShowPicture)
+            {
+                // Hide the picture before dropping
+                pictureItem.m_ShowPicture = false;
+                StartCoroutine(pictureItem.LerpToShowPicture(0.01f));
+            }
+
             m_SelectedItem.DropItem();
             m_InventoryItems[m_selectedItemIndex] = null;
             UpdateInventoryUI();

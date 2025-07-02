@@ -401,25 +401,25 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 7461662234686114}
-  - {fileID: 5291118924240001739}
-  - {fileID: -3005142760594798565}
+  - {fileID: 7633979984978270935}
+  - {fileID: -5690352189061263679}
+  - {fileID: -836685545003404387}
   - {fileID: -2926833752773562932}
   - {fileID: -5867943972408698676}
-  - {fileID: -6734879407051594623}
-  - {fileID: -9012070629970661676}
-  - {fileID: -5905518684548000757}
-  - {fileID: -4801438278933726723}
+  - {fileID: 5500631621430309561}
+  - {fileID: 4094731025268782372}
+  - {fileID: -6204253862528929664}
+  - {fileID: -5729091212528422148}
   - {fileID: -2415469661140867373}
-  - {fileID: 4841325455513145841}
-  - {fileID: -1488453961318907454}
-  - {fileID: 7056854577208559619}
-  - {fileID: -885348503187303056}
-  - {fileID: 1415353621246143524}
-  - {fileID: -5635431372957325524}
-  - {fileID: -8320007660269660348}
-  - {fileID: -2405060372981339068}
-  - {fileID: -508244812769386353}
+  - {fileID: -279643314013007215}
+  - {fileID: 4057317088758344275}
+  - {fileID: -9388175450609380}
+  - {fileID: 7029505351197480548}
+  - {fileID: 3077119639454220964}
+  - {fileID: -3091483648618757144}
+  - {fileID: -8390587855371858794}
+  - {fileID: -2630994189563943025}
+  - {fileID: -1236802950814299834}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -858,11 +858,11 @@ MonoBehaviour:
   m_Name: MicrosoftHandInteraction Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Microsoft Hand Interaction Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.handtracking
+  openxrExtensionStrings: XR_MSFT_hand_interaction
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &-5017314010878238811
@@ -1448,11 +1448,11 @@ MonoBehaviour:
   m_Name: PalmPoseInteraction Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Palm Pose
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.palmpose
+  openxrExtensionStrings: XR_EXT_palm_pose
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &-2857750533473774030
@@ -1762,23 +1762,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   features:
   - {fileID: 6208848166049861704}
-  - {fileID: -4699281117442443164}
-  - {fileID: -2826816494450124986}
-  - {fileID: 5664218110947488307}
-  - {fileID: 1863413513750301276}
+  - {fileID: -1430226706715624399}
+  - {fileID: -8753648542292351395}
+  - {fileID: 5014534648478943911}
+  - {fileID: 1729124266231617938}
   - {fileID: -6762811563309982003}
-  - {fileID: -6165164622870355363}
-  - {fileID: 6141311282084441612}
-  - {fileID: -8349462149979293890}
-  - {fileID: 371177231939913583}
-  - {fileID: 4950015800097572915}
-  - {fileID: -2632694693611970954}
-  - {fileID: 8148462776941775599}
+  - {fileID: -4175816483431248569}
+  - {fileID: 2927430663352350952}
+  - {fileID: -2290176319537256230}
+  - {fileID: 635263755135438124}
+  - {fileID: 1659372145826825545}
+  - {fileID: 7849217966879592269}
+  - {fileID: -3994847191720411273}
   - {fileID: 3244668272927148732}
-  - {fileID: -180429862534491280}
+  - {fileID: -2892268223715409746}
   - {fileID: -3867918659432879511}
-  - {fileID: 611055784971370902}
-  - {fileID: 3351902159289744076}
+  - {fileID: 2953381965351159357}
+  - {fileID: 3033938898826642152}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -2507,11 +2507,11 @@ MonoBehaviour:
   m_Name: ValveIndexControllerProfile Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
+  nameUi: Valve Index Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.valveindex
   openxrExtensionStrings: 
-  company: 
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &956775086615098731
@@ -3011,11 +3011,11 @@ MonoBehaviour:
   m_Name: KHRSimpleControllerProfile Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
+  nameUi: Khronos Simple Controller Profile
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.khrsimpleprofile
   openxrExtensionStrings: 
-  company: 
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &3351902159289744076

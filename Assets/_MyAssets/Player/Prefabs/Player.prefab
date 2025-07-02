@@ -1,5 +1,126 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &908532825898215679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3992934215230870437}
+  - component: {fileID: 3788049778408618825}
+  - component: {fileID: 6962086889642094958}
+  m_Layer: 3
+  m_Name: FrontLight XLarge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3992934215230870437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908532825898215679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 7765637538745701484}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &3788049778408618825
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908532825898215679}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 0
+  m_Color: {r: 1, g: 0.9843137, b: 0.9372549, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 100
+  m_InnerSpotAngle: 80
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &6962086889642094958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908532825898215679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &938300793073316726
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5817a9acdbde04998553fd04afa5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FlashlightLayerMask:
+    serializedVersion: 2
+    m_Bits: 255
 --- !u!108 &1538176240646009598
 Light:
   m_ObjectHideFlags: 0
@@ -344,6 +468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5817a9acdbde04998553fd04afa5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FlashlightLayerMask:
+    serializedVersion: 2
+    m_Bits: 255
 --- !u!108 &6080665761446931540
 Light:
   m_ObjectHideFlags: 0
@@ -355,7 +482,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.9843137, b: 0.9372549, a: 1}
-  m_Intensity: 100
+  m_Intensity: 70
   m_Range: 70
   m_SpotAngle: 15
   m_InnerSpotAngle: 5
@@ -461,6 +588,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3992934215230870437}
   - {fileID: 7173576740974580000}
   - {fileID: 4467715590925966330}
   - {fileID: 6393162030037163513}
@@ -514,6 +642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5817a9acdbde04998553fd04afa5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FlashlightLayerMask:
+    serializedVersion: 2
+    m_Bits: 255
 --- !u!108 &1883652371159948273
 Light:
   m_ObjectHideFlags: 0
@@ -525,7 +656,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.9843137, b: 0.9372549, a: 1}
-  m_Intensity: 70
+  m_Intensity: 50
   m_Range: 70
   m_SpotAngle: 30
   m_InnerSpotAngle: 10
@@ -800,6 +931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5817a9acdbde04998553fd04afa5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FlashlightLayerMask:
+    serializedVersion: 2
+    m_Bits: 255
 --- !u!108 &9195287235564564231
 Light:
   m_ObjectHideFlags: 0
@@ -1376,6 +1510,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cb01a517-7299-4ec9-9dd5-6231dba29a58
     m_ActionName: 'Player/UseItem[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 650971650940261522}
+        m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
+        m_MethodName: OnAltUseItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9658571f-335d-4b61-a013-23ad4568565d
+    m_ActionName: 'Player/AltUseItem[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

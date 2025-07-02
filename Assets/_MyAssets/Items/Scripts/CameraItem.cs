@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using System.IO;
-using Unity.VisualScripting;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -28,6 +27,8 @@ public class CameraItem : ItemBase
     protected override void Update()
     {
         base.Update();
+
+        UpdateCooldown();
     }
 
     #endregion
@@ -37,21 +38,46 @@ public class CameraItem : ItemBase
     [Header("Components"), Space(5)]
     public GameObject m_PictureItemPrefab;
     public RenderTexture m_RenderTexture;
-    public string m_OutputFileName = "Picture";
     private Camera m_RenderCamera;
     private GameObject m_CameraFlash;
     private Transform m_PictureDropPoint;
-    private int m_PictureCounter = 0;
+    private readonly string m_OutputFileName = "Picture";
 
     #endregion
 
     #region Item
 
+    [Header("Item Info"), Space(5)]
+    private int m_PictureCounter = 0;
+    private float m_CooldownTime = 1.0f;
+
     public override void UseItem()
     {
         base.UseItem();
 
+        if (m_CooldownTime > 0f)
+        {
+            return;
+        }
+
         StartCoroutine(TakePicture());
+    }
+
+    public override void AltUseItem()
+    {
+        base.AltUseItem();
+    }
+
+    private void UpdateCooldown()
+    {
+        if (m_CooldownTime > 0f)
+        {
+            m_CooldownTime -= Time.deltaTime;
+        }
+        else
+        {
+            m_CooldownTime = 0f;
+        }
     }
 
     private IEnumerator TakePicture()
@@ -70,88 +96,51 @@ public class CameraItem : ItemBase
         image.ReadPixels(new Rect(0, 0, width, height), 0, 0);
         image.Apply();
 
-        yield return new Null();
+        yield return null;
 
-        // Optional: Convert to gamma if you're using linear color space
-        // Uncomment if your images look too dark
+        // Optimized linear to gamma correction for linear color space in Unity
+        // Only use if your textures appear too dark
 
-        Color[] pixels = image.GetPixels();
+        Color32[] pixels = image.GetPixels32();
         for (int i = 0; i < pixels.Length; i++)
         {
-            pixels[i].r = Mathf.LinearToGammaSpace(pixels[i].r);
-            pixels[i].g = Mathf.LinearToGammaSpace(pixels[i].g);
-            pixels[i].b = Mathf.LinearToGammaSpace(pixels[i].b);
+            Color c = pixels[i];
+            c.r = Mathf.LinearToGammaSpace(c.r);
+            c.g = Mathf.LinearToGammaSpace(c.g);
+            c.b = Mathf.LinearToGammaSpace(c.b);
+            pixels[i] = c;
         }
-        Color32[] pixels32 = new Color32[pixels.Length];
-        for (int i = 0; i < pixels.Length; i++)
-        {
-            pixels32[i] = pixels[i];
-        }
-        image.SetPixels32(pixels32);
+        image.SetPixels32(pixels);
         image.Apply();
 
         byte[] bytes = image.EncodeToPNG();
 
-        yield return new Null();
+        yield return null;
 
-        // Increment counter before using it
         m_PictureCounter++;
 
-        string fileName = m_OutputFileName + "_" + m_PictureCounter + ".png";
-        string fullPath = Application.dataPath + "/Resources/RenderPictures/" + fileName;
+        string fileName = "/" + m_OutputFileName + m_PictureCounter + ".png";
+        string fullPath = FolderManager.m_CurrentPicturePath + fileName;
         Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
         File.WriteAllBytes(fullPath, bytes);
 
-        yield return new Null();
-
-#if UNITY_EDITOR
-        // Refresh the AssetDatabase so Unity recognizes the new file
-        AssetDatabase.Refresh();
-#endif
-
-        // Wait a frame to ensure the file is recognized by Unity
         yield return null;
 
         GameObject TempPicture = Instantiate(m_PictureItemPrefab, m_PictureDropPoint.position, m_PictureDropPoint.rotation);
 
-        yield return new Null();
+        yield return null;
 
-        // Load the texture from Resources
-        Texture2D loadedTexture = Resources.Load<Texture2D>("RenderPictures/" + m_OutputFileName + "_" + m_PictureCounter);
-        if (loadedTexture != null)
-        {
-            TempPicture.GetComponent<PictureItem>().SetPictureTexture(loadedTexture);
-        }
-        else
-        {
-            Debug.LogError("Failed to load texture: " + "RenderPictures/" + m_OutputFileName + "_" + m_PictureCounter);
-        }
+        TempPicture.GetComponent<PictureItem>().SetPictureTexture(fullPath);
 
-        yield return new Null();
+        yield return null;
 
         RenderTexture.active = null;
         m_RenderCamera.targetTexture = null;
         Destroy(image);
 
-        Debug.Log("Picture taken and saved to: " + fullPath);
-
         yield return new WaitForSeconds(0.1f);
         m_CameraFlash.SetActive(false);
-    }
-
-    public override void AltUseItem()
-    {
-        base.AltUseItem();
-    }
-
-    public override void EquipItem()
-    {
-        base.EquipItem();
-    }
-
-    public override void DropItem()
-    {
-        base.DropItem();
+        m_CooldownTime = 1.0f;
     }
 
     #endregion
