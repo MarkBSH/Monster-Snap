@@ -32,6 +32,7 @@ public class PlayerPickupItems : MonoBehaviour
             {
                 if (hit.collider.CompareTag("ItemPickup"))
                 {
+                    // A check  to see if the item is not already in the player's inventory
                     if (hit.collider.transform.parent == null)
                     {
                         m_Inventory.AddItemToInventory(hit.collider.gameObject.GetComponent<ItemBase>());

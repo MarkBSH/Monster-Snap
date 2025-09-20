@@ -401,26 +401,27 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 7633979984978270935}
-  - {fileID: -5690352189061263679}
-  - {fileID: -836685545003404387}
-  - {fileID: -2926833752773562932}
-  - {fileID: -5867943972408698676}
-  - {fileID: 5500631621430309561}
-  - {fileID: 4094731025268782372}
-  - {fileID: -6204253862528929664}
-  - {fileID: -5729091212528422148}
-  - {fileID: -2415469661140867373}
-  - {fileID: -279643314013007215}
-  - {fileID: 4057317088758344275}
-  - {fileID: -9388175450609380}
-  - {fileID: 7029505351197480548}
-  - {fileID: 3077119639454220964}
-  - {fileID: -3091483648618757144}
-  - {fileID: -8390587855371858794}
-  - {fileID: -2630994189563943025}
-  - {fileID: -1236802950814299834}
+  - {fileID: -5017314010878238811}
+  - {fileID: 7211512269057522757}
+  - {fileID: -3005142760594798565}
+  - {fileID: -7050647481355523941}
+  - {fileID: 2158030074957953034}
+  - {fileID: -6734879407051594623}
+  - {fileID: 4915192522769903137}
+  - {fileID: -5905518684548000757}
+  - {fileID: -5830162560709519758}
+  - {fileID: -6716123566901645983}
+  - {fileID: 1927305505566180813}
+  - {fileID: 5535189143248310026}
+  - {fileID: 7056854577208559619}
+  - {fileID: -3616422330133341921}
+  - {fileID: -2857750533473774030}
+  - {fileID: 6016941736976803466}
+  - {fileID: -1150865085835551002}
+  - {fileID: -7899175940214211933}
+  - {fileID: 3988524067778088865}
   m_renderMode: 1
+  m_latencyOptimization: 0
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
     m_List: 00000000
@@ -429,7 +430,10 @@ MonoBehaviour:
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_optimizeMultiviewRenderRegions: 0
+  m_multiviewRenderRegionsOptimizationMode: 0
+  m_hasMigratedMultiviewRenderRegionSetting: 1
   m_foveatedRenderingApi: 0
+  m_useOpenXRPredictedTime: 0
 --- !u!114 &-6954976081439692456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,11 +1725,11 @@ MonoBehaviour:
   m_Name: XrPerformanceSettingsFeature Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: XR Performance Settings
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.extension.performance_settings
+  openxrExtensionStrings: XR_EXT_performance_settings
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &-2333355792758257362
@@ -1761,25 +1765,26 @@ MonoBehaviour:
   m_Name: Metro
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 6208848166049861704}
-  - {fileID: -1430226706715624399}
-  - {fileID: -8753648542292351395}
-  - {fileID: 5014534648478943911}
-  - {fileID: 1729124266231617938}
-  - {fileID: -6762811563309982003}
-  - {fileID: -4175816483431248569}
-  - {fileID: 2927430663352350952}
-  - {fileID: -2290176319537256230}
-  - {fileID: 635263755135438124}
-  - {fileID: 1659372145826825545}
-  - {fileID: 7849217966879592269}
-  - {fileID: -3994847191720411273}
-  - {fileID: 3244668272927148732}
-  - {fileID: -2892268223715409746}
-  - {fileID: -3867918659432879511}
-  - {fileID: 2953381965351159357}
-  - {fileID: 3033938898826642152}
+  - {fileID: -6443001427329051136}
+  - {fileID: 8858010757926891362}
+  - {fileID: 2332864393660078247}
+  - {fileID: 5664218110947488307}
+  - {fileID: 1863413513750301276}
+  - {fileID: -7131777570678775299}
+  - {fileID: 6355479007687117697}
+  - {fileID: -3906786719643964898}
+  - {fileID: -7666717298749288105}
+  - {fileID: 371177231939913583}
+  - {fileID: 4950015800097572915}
+  - {fileID: -5187148249402317443}
+  - {fileID: 8148462776941775599}
+  - {fileID: 405571412080212425}
+  - {fileID: -8027507991464601647}
+  - {fileID: 4762401585348687876}
+  - {fileID: 611055784971370902}
+  - {fileID: 3351902159289744076}
   m_renderMode: 1
+  m_latencyOptimization: 0
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
     m_List: 00000000
@@ -1788,7 +1793,10 @@ MonoBehaviour:
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_optimizeMultiviewRenderRegions: 0
+  m_multiviewRenderRegionsOptimizationMode: 0
+  m_hasMigratedMultiviewRenderRegionSetting: 1
   m_foveatedRenderingApi: 0
+  m_useOpenXRPredictedTime: 0
 --- !u!114 &-2290176319537256230
 MonoBehaviour:
   m_ObjectHideFlags: 0

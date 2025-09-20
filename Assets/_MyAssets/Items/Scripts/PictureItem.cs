@@ -28,8 +28,9 @@ public class PictureItem : ItemBase
     #region Item Info
 
     [Header("Item Info"), Space(5)]
+    public int m_PictureScore;
     public bool m_ShowPicture = false;
-    public bool m_AltUseCooldown = false;
+    private bool m_AltUseCooldown = false;
     private Vector3 m_DownPosition;
     private Vector3 m_UpPosition;
 

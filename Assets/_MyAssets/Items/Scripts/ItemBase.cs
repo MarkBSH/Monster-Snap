@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// TODO - Add items: Map, Handbook, Regen items, 
+
 public class ItemBase : MonoBehaviour
 {
     #region Unity Methods
@@ -23,7 +25,7 @@ public class ItemBase : MonoBehaviour
 
     #region Components
 
-    [Header("Components"), Space(5)]
+
 
     #endregion
 

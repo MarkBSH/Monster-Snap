@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using Steamworks;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,10 +17,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        // Giving the player a unique name based on Steam's persona name or a fallback
+        m_PlayerName = SteamFriends.GetPersonaName();
+        if (string.IsNullOrEmpty(m_PlayerName))
+        {
+            m_PlayerName = "Player" + SessionManager.Instance.m_PlayerCount;
+        }
+        SessionManager.Instance.m_PlayerCount++;
         m_CurrentMoveSpeed = m_BaseMoveSpeed;
         m_CurrentStamina = m_MaxStamina;
         m_StaminaBarMaxWidth = m_StaminaBar.rectTransform.sizeDelta.x;
         m_OriginalHeight = m_CharacterController.height;
+
+        MouseManager.Instance.SetMouseVisibility(false);
     }
 
     private void Update()
@@ -28,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateStaminaBar();
         MoveCharacter();
         CheckGroundStatus();
-        ApplyGravity();
+        ApplyYVelocity();
     }
 
     #endregion
@@ -36,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     #region Components
 
     [Header("Components"), Space(5)]
+    public string m_PlayerName;
     private CharacterController m_CharacterController;
     private Animator m_Animator;
 
@@ -179,12 +190,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateStaminaBar()
     {
-        if (m_StaminaBar != null)
-        {
-            float _staminaWidth = m_CurrentStamina / m_MaxStamina * m_StaminaBarMaxWidth;
-            m_StaminaBar.rectTransform.sizeDelta = new Vector2(_staminaWidth, m_StaminaBar.rectTransform.sizeDelta.y);
-            m_StaminaBar.rectTransform.anchoredPosition = new Vector2(-m_StaminaBarMaxWidth / 2 + _staminaWidth / 2, m_StaminaBar.rectTransform.anchoredPosition.y);
-        }
+        float _staminaWidth = m_CurrentStamina / m_MaxStamina * m_StaminaBarMaxWidth;
+        m_StaminaBar.rectTransform.sizeDelta = new Vector2(_staminaWidth, m_StaminaBar.rectTransform.sizeDelta.y);
+        m_StaminaBar.rectTransform.anchoredPosition = new Vector2(-m_StaminaBarMaxWidth / 2 + _staminaWidth / 2, m_StaminaBar.rectTransform.anchoredPosition.y);
     }
 
     #endregion
@@ -228,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void ApplyGravity()
+    private void ApplyYVelocity()
     {
         if (m_IsOnAnyGround)
         {

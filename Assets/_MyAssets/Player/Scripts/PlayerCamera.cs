@@ -39,8 +39,8 @@ public class PlayerCamera : MonoBehaviour
     private readonly float m_BaseMouseSensitivity = 10.0f;
     private Vector2 m_LookInput;
     private float m_ClampedY;
-    private readonly float m_MaxYAngle = -25.0f;
-    private readonly float m_MinYAngle = 30.0f;
+    private readonly float m_MaxYAngle = -40.0f;
+    private readonly float m_MinYAngle = 50.0f;
 
     public void OnLook(InputAction.CallbackContext _context)
     {

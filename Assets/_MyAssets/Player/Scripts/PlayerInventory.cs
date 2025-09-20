@@ -90,8 +90,6 @@ public class PlayerInventory : MonoBehaviour
                 return;
             }
         }
-
-        Debug.LogWarning("Inventory is full! Cannot add item: " + item.m_ItemInfo.m_ItemName);
     }
 
     private IEnumerator ItemLerpToHand(ItemBase item)
@@ -112,7 +110,6 @@ public class PlayerInventory : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
     }
 
     private void UpdateInventoryUI()
